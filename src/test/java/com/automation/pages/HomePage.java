@@ -20,16 +20,38 @@ public class HomePage extends BasePage {
     @FindBy(xpath = "//android.widget.TextView[@text='Flights']")
     WebElement flightsTab;
 
+    @FindBy(xpath = "//android.view.ViewGroup[@resource-id='android:id/content']/android.view.View/android.view.View[1]/android.widget.Button")
+    WebElement closeBtnSignIn;
+    @FindBy(xpath = "//android.view.View[@content-desc ='Close sheet']")
+    WebElement closeBtnNav;
+    @FindBy(id = "com.android.permissioncontroller:id/permission_allow_button")
+    WebElement allowOrDontAllow;
+
     public void openApplication() {
-        if (isPresent(acceptBtn)) {
-            acceptBtn.click();
+
+        if(isPresent(closeBtnSignIn)){
+            closeBtnSignIn.click();
+
         }
 
-        if (isPresent(getStartedBtn)) {
-            getStartedBtn.click();
-            closeBtn.click();
-            letsGoBtn.click();
+        if(isPresent(allowOrDontAllow)){
+            allowOrDontAllow.click();
+
         }
+
+        if(isPresent(closeBtnNav)){
+            closeBtnNav.click();
+        }
+
+//        if (isPresent(acceptBtn)) {
+//            acceptBtn.click();
+//        }
+//
+//        if (isPresent(getStartedBtn)) {
+//            getStartedBtn.click();
+//            closeBtn.click();
+//            letsGoBtn.click();
+//        }
     }
 
 

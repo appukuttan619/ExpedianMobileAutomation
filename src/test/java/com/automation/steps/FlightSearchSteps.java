@@ -15,27 +15,27 @@ public class FlightSearchSteps {
     }
 
     @When("user enters {string} into flying from")
-    public void user_enters_into_flying_from(String string) {
+    public void user_enters_into_flying_from(String fromPlace) {
+        flightSearchPage.setFrom(fromPlace);
 
     }
 
     @When("user enters {string} into flying to")
-    public void user_enters_into_flying_to(String string) {
+    public void user_enters_into_flying_to(String toPlace) {
+        flightSearchPage.setTo(toPlace);
 
     }
 
     @When("select date from {string} to {string}")
-    public void select_date_from_to(String string, String string2) {
+    public void select_date_from_to(String fromDate, String toDate) {
+        flightSearchPage.setDate(fromDate, toDate);
 
     }
 
     @When("click on search button")
     public void click_on_search_button() {
+        flightSearchPage.hitsearch();
 
     }
 
-    @Then("verify flight listing page is displayed")
-    public void verify_flight_listing_page_is_displayed() {
-
-    }
 }

@@ -16,6 +16,7 @@ public class Hooks {
 
     @After
     public void cleanUp(Scenario scenario) {
+
         DriverManager.getDriver().quit();
     }
 

@@ -14,14 +14,14 @@ public class DriverManager {
     public static void createDriver() {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("platformName", "Android");
-        capabilities.setCapability("deviceName", "RZ8N9250P5Z");
+        capabilities.setCapability("deviceName", "27211JEGR11956");
         capabilities.setCapability("automationName", "UiAutomator2");
-        capabilities.setCapability("app", "D:\\MobileAutomation\\expedia.apk");
+        capabilities.setCapability("app", "C:\\Users\\280704\\Downloads\\expedia.apk");
         capabilities.setCapability("appActivity","com.expedia.bookings.activity.SearchActivity");
         capabilities.setCapability("appPackage","com.expedia.bookings");
 
         driver = new AndroidDriver(capabilities);
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
 
     public static AppiumDriver getDriver() {
